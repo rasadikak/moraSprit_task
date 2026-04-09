@@ -1,0 +1,220 @@
+.page {
+  min-height: 100vh;
+  background-color: #f0f4f8;
+  padding: 2rem 1rem;
+}
+
+.dashboard {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.h2 {
+  font-size: 24px;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #5f6368;
+  margin-bottom: 0;
+}
+
+.h4 {
+  margin: 1.5rem 0 0.75rem;
+  color: #16213e;
+  font-size: 15px;
+}
+
+/* Members grid */
+.membersGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.memberCard {
+  border: 1px solid #c9d6e3;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  background-color: #ffffff;
+  text-align: center;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.memberCard:hover {
+  background-color: #e8f0fe;
+  border-color: #4a90d9;
+}
+
+.selected {
+  border-color: #1a73e8;
+  background-color: #d2e3fc;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #1a73e8;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 8px;
+}
+
+.selected .avatar {
+  background-color: #1558b0;
+}
+
+.memberName {
+  font-weight: 600;
+  font-size: 13px;
+  margin: 0;
+  color: #1a1a2e;
+}
+
+.memberRole {
+  font-size: 11px;
+  color: #5f6368;
+  margin: 3px 0 0;
+}
+
+/* Check availability section */
+.search {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 420px;
+  background-color: #ffffff;
+  padding: 1.25rem;
+  border-radius: 10px;
+  border: 1px solid #c9d6e3;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label {
+  font-size: 12px;
+  color: #5f6368;
+  font-weight: 500;
+}
+
+.memberDisplay {
+  padding: 9px 12px;
+  background-color: #f8f9fa;
+  border: 1px solid #c9d6e3;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #1a1a2e;
+  min-height: 38px;
+}
+
+/* DATE INPUT — this is the fix */
+.dateInput {
+  display: block;
+  width: 100%;
+  padding: 9px 12px;
+  font-size: 14px;
+  color: #1a1a2e;
+  background-color: #ffffff;
+  border: 1px solid #c9d6e3;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+  box-sizing: border-box;
+  height: 40px;
+}
+
+.dateInput:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 2px #d2e3fc;
+}
+
+.checkBtn {
+  padding: 10px 16px;
+  background-color: #1a73e8;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.checkBtn:hover {
+  background-color: #1558b0;
+}
+
+.checkBtn:disabled {
+  background-color: #a8c7fa;
+  cursor: not-allowed;
+}
+
+/* Result */
+.result {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border-radius: 10px;
+  border: 1px solid;
+  max-width: 420px;
+}
+
+.resultName {
+  font-weight: 600;
+  font-size: 15px;
+  margin: 0 0 6px;
+}
+
+.resultStatus {
+  font-size: 14px;
+  margin: 0 0 6px;
+}
+
+.resultReason {
+  font-size: 13px;
+  margin: 0 0 6px;
+  line-height: 1.5;
+}
+
+.resultDate {
+  font-size: 12px;
+  margin: 0;
+  opacity: 0.75;
+}
+
+.available {
+  background: #e8f5e9;
+  border-color: #4caf50;
+  color: #2e7d32;
+}
+
+.busy {
+  background: #ffebee;
+  border-color: #f44336;
+  color: #c62828;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .membersGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .membersGrid {
+    grid-template-columns: 1fr;
+  }
+}
