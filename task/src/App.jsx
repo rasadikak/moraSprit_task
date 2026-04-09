@@ -42,9 +42,9 @@ function App() {
               className={`${styles.memberCard} ${selectedMember?.id === m.id ? styles.selected : ''}`}
               onClick={() => { setSelectedMember(m); setResult(null) }}
             >
-              <div className={styles.avatar}>
+              {/*<div className={styles.avatar}>
                 {m.name.split(' ').slice(0, 2).map(w => w[0]).join('')}
-              </div>
+              </div>*/}
               <p className={styles.memberName}>{m.name}</p>
               <p className={styles.memberRole}>{m.role}</p>
             </div>
